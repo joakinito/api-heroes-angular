@@ -1,0 +1,29 @@
+<div *ngIf="hero" class="hero-detail-container">
+  <h2>{{ hero.name }}</h2>
+  <p class="hero-id">ID: {{ hero.id }}</p>
+  <img
+    class="hero-image"
+    [src]="hero.thumbnail.path + '.' + hero.thumbnail.extension"
+    alt="{{ hero.name }}"
+  />
+
+  <div class="series-container">
+    <h3>Series:</h3>
+    <ul>
+      <li *ngFor="let series of hero.series.items" class="series-item">
+        <a [href]="series.resourceURI">{{ series.name }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="comics-container">
+    <h3>Comics:</h3>
+    <ul>
+      <li *ngFor="let comic of hero.comics.items" class="comic-item">
+        <a [href]="comic.resourceURI">{{ comic.name }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <button class="back-button" (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,25 @@
+<h2 class="series-title">Comics</h2>
+<div class="series-container" *ngIf="series && series.length > 0">
+  <div class="series-row" *ngFor="let serie of series">
+    <div class="series-item">
+      <div class="image-wrapper">
+        <img
+          [src]="serie.thumbnail.path + '.' + serie.thumbnail.extension"
+          alt="{{ serie.title }}"
+        />
+        <div class="comic-title">{{ serie.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="series-pagination">
+  <button
+    class="series-button"
+    (click)="prevPage()"
+    [disabled]="currentPage === 1"
+  >
+    Back
+  </button>
+  <span class="series-page">Page {{ currentPage }}</span>
+  <button class="series-button" (click)="nextPage()">Next</button>
+</div>

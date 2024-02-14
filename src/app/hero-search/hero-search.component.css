@@ -1,0 +1,49 @@
+/* styles.css (o cualquier otro archivo de estilos que estés utilizando) */
+#search-component {
+  text-align: left; 
+  margin-bottom: 20px; 
+}
+
+.search-input {
+  padding: 10px;
+  border: 2px solid #ed1d24; 
+  border-radius: 5px; 
+  font-size: 1rem; 
+  color: #000; 
+  transition: border-color 0.3s; 
+  width: calc(100% - 24px); 
+  box-sizing: border-box; 
+}
+
+.search-input::placeholder {
+  color: #ccc; 
+}
+
+.search-input:focus,
+.searching { 
+  outline: none; 
+  border-color: #0074C9; 
+  width: calc(100% - 30px); 
+}
+
+.search-result {
+  list-style-type: none; 
+  padding: 0;
+}
+
+.hero-item {
+  margin-bottom: 5px; 
+}
+
+.hero-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ed1d24; 
+  color: #fff; 
+  border-radius: 5px; 
+  text-decoration: none; 
+}
+
+.hero-link:hover {
+  background-color: #c10c18; 
+}

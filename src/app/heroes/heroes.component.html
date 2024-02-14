@@ -1,0 +1,23 @@
+<div class="marvel-container">
+  <h2 class="marvel-title">Heroes</h2>
+
+  <ul class="heroes marvel-list">
+    <li *ngFor="let hero of heroes" class="marvel-list-item">
+      <a routerLink="/detail/{{ hero.id }}" class="marvel-link">
+        <span class="badge marvel-badge">{{ hero.id }}</span> {{ hero.name }}
+      </a>
+    </li>
+  </ul>
+
+  <div class="marvel-pagination">
+    <button
+      (click)="prevPage()"
+      [disabled]="currentPage === 1"
+      class="marvel-button"
+    >
+      back
+    </button>
+    <span class="marvel-page">Page {{ currentPage }}</span>
+    <button (click)="nextPage()" class="marvel-button">Next</button>
+  </div>
+</div>
